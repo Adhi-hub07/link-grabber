@@ -4,6 +4,27 @@
   <img src="assets/banner.png" alt="ADHI-HUB Banner" width="100%">
 </p>
 
+<div align="center">
+
+### ⬇ Direct Download (no Python needed)
+
+[![Download TUI](https://img.shields.io/badge/⬇_Download_ADHI--HUB.exe-pink?style=for-the-badge)](https://github.com/Adhi-hub07/link-grabber/releases/download/v1.0.0/ADHI-HUB.exe)
+[![Download GUI](https://img.shields.io/badge/⬇_Download_ADHI--HUB--GUI.exe-ff9ec7?style=for-the-badge)](https://github.com/Adhi-hub07/link-grabber/releases/download/v1.0.0/ADHI-HUB-GUI.exe)
+
+### ⚡ One-line command (Windows PowerShell)
+
+```powershell
+irm https://github.com/Adhi-hub07/link-grabber/releases/download/v1.0.0/ADHI-HUB.exe -OutFile ADHI-HUB.exe; .\ADHI-HUB.exe
+```
+
+### 🐍 One-line install from source
+
+```bash
+pip install yt-dlp rich
+```
+
+</div>
+
 > **The ultimate video & music downloader.** Paste a link, pick a format, done.
 > Works with **YouTube, Instagram, TikTok, Facebook, Twitter** and **1000+ other sites**.
 
