@@ -1,6 +1,6 @@
-# 🎬 ADHI-HUB — The Ultimate Video & Music Downloader
+# 🎬 ADHI-HUB — Link Grabber
 
-> **ADHI-HUB** — The ultimate video & music downloader. Paste a link, pick a format, done.
+> **The ultimate video & music downloader.** Paste a link, pick a format, done.
 > Works with **YouTube, Instagram, TikTok, Facebook, Twitter** and **1000+ other sites**.
 
 <div align="center">
@@ -11,6 +11,21 @@
 ![Made with ❤](https://img.shields.io/badge/Made%20with-%E2%9D%A4-ff69b4)
 
 </div>
+
+---
+
+## 📦 Which file is which?
+
+| File | What it does | No Python needed? |
+|------|--------------|-------------------|
+| **`releases/ADHI-HUB.exe`** | ⭐ **Ready-made app (TUI)** — double-click, no installs | ✅ YES |
+| **`releases/ADHI-HUB-GUI.exe`** | ⭐ **Ready-made app (GUI window)** — double-click | ✅ YES |
+| `downloader.py` | Source code — terminal version (needs Python) | ❌ |
+| `downloader_gui.py` | Source code — GUI version (needs Python) | ❌ |
+| `start.bat` | One-click launcher for the Python version (Windows) | ❌ |
+| `start_gui.bat` | One-click launcher for the GUI Python version (Windows) | ❌ |
+
+> 💡 **Universal:** The `.exe` files run on ANY Windows PC (7/10/11) — no Python, no yt-dlp, no FFmpeg installs. Double-click and done.
 
 ---
 
@@ -30,32 +45,30 @@
 
 ---
 
-## 🚀 Quick Start (Windows)
+## 🚀 Quick Start
 
-### Option A — Just run it
+### Easiest — the EXE (anyone can do this)
+1. Download **`releases/ADHI-HUB.exe`** (terminal style) or **`releases/ADHI-HUB-GUI.exe`** (window style)
+2. Double-click it. That's it. 🎉
+
+### From source (developers)
 1. Install [Python 3](https://python.org/downloads/) (tick "Add to PATH")
-2. Open a terminal in the project folder and run:
+2. Install dependencies:
    ```bash
    pip install yt-dlp rich
    ```
-3. Double-click **`start.bat`** — or run:
+3. Run:
    ```bash
-   python downloader.py
+   python downloader.py        # terminal version
+   python downloader_gui.py    # GUI version
    ```
-
-### Option B — GUI (easier)
-Double-click **`start_gui.bat`**, or run:
-```bash
-python downloader_gui.py
-```
+4. Or double-click **`start.bat`** / **`start_gui.bat`**
 
 ---
 
 ## 🧑‍💻 Usage
 
 ### Menu mode
-Run the program, pick an option, paste your link:
-
 ```
 1)  Download VIDEO          ← pick quality: 480p → 4K
 2)  Download AUDIO (mp3)    ← auto-converts
@@ -80,7 +93,7 @@ python downloader.py "PLAYLIST_LINK" --playlist          # whole playlist
 
 ---
 
-## 📦 Requirements
+## 📦 Requirements (source only)
 
 | Dependency | Needed for |
 |------------|------------|
@@ -93,16 +106,29 @@ python downloader.py "PLAYLIST_LINK" --playlist          # whole playlist
 
 ---
 
+## 🛠️ Building the EXE yourself
+
+```bash
+pip install pyinstaller
+pyinstaller --onefile --name ADHI-HUB downloader.py        # terminal version
+pyinstaller --onefile --windowed --name ADHI-HUB-GUI downloader_gui.py  # GUI version
+```
+
+---
+
 ## 📁 Project Structure
 
 ```
-adhi-hub-downloader/
-├── downloader.py        ← main TUI app
-├── downloader_gui.py    ← GUI version
-├── start.bat            ← one-click launcher (TUI)
-├── start_gui.bat        ← one-click launcher (GUI)
-├── config.json          ← your settings (created on first run)
-└── history.json         ← your download history (created on first run)
+link-grabber/
+├── releases/              ← ⭐ ready-made apps, no installs needed
+│   ├── ADHI-HUB.exe       ← terminal version (Windows)
+│   └── ADHI-HUB-GUI.exe   ← window version (Windows)
+├── downloader.py          ← main TUI app (source)
+├── downloader_gui.py      ← GUI app (source)
+├── start.bat              ← one-click launcher (TUI, Windows)
+├── start_gui.bat          ← one-click launcher (GUI, Windows)
+├── README.md
+└── .gitignore
 ```
 
 ---
