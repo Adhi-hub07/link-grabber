@@ -1,5 +1,9 @@
 # 🎬 ADHI-HUB — Link Grabber
 
+<p align="center">
+  <img src="assets/banner.png" alt="ADHI-HUB Banner" width="100%">
+</p>
+
 > **The ultimate video & music downloader.** Paste a link, pick a format, done.
 > Works with **YouTube, Instagram, TikTok, Facebook, Twitter** and **1000+ other sites**.
 
@@ -120,6 +124,7 @@ pyinstaller --onefile --windowed --name ADHI-HUB-GUI downloader_gui.py  # GUI ve
 
 ```
 link-grabber/
+├── assets/               ← banner image for README
 ├── releases/              ← ⭐ ready-made apps, no installs needed
 │   ├── ADHI-HUB.exe       ← terminal version (Windows)
 │   └── ADHI-HUB-GUI.exe   ← window version (Windows)
