@@ -32,6 +32,8 @@ APP_DIR = os.path.dirname(os.path.abspath(__file__))
 CONFIG_FILE = os.path.join(APP_DIR, "config.json")
 HISTORY_FILE = os.path.join(APP_DIR, "history.json")
 
+DEFAULT_FOLDER = os.path.join(os.path.expanduser("~"), "Downloads", "ADHI-HUB Downloads")
+
 def load_json(path, default):
     try:
         with open(path, "r", encoding="utf-8") as f:
@@ -46,8 +48,14 @@ def save_json(path, data):
     except Exception:
         pass
 
-CONFIG = {**{"theme": "pink", "folder": os.path.join(os.path.expanduser("~"), "Downloads")},
+CONFIG = {**{"theme": "pink", "folder": DEFAULT_FOLDER},
           **load_json(CONFIG_FILE, {})}
+
+def ensure_folder(folder):
+    """Create the download folder once; reuse it after that."""
+    created = not os.path.exists(folder)
+    os.makedirs(folder, exist_ok=True)
+    return created
 
 THEMES = {
     "pink":   ("#ff9ec7", "#ff6fa5"),
@@ -115,6 +123,7 @@ def show_menu():
         ("6", "Settings", "change folder / theme"),
         ("7", "History", "last 50 downloads saved"),
         ("8", "About", "info about this tool"),
+        ("9", "Open downloads folder", "see your downloaded files"),
         ("0", "Exit", "bye!"),
     ]
     for opt, action, detail in rows:
@@ -180,7 +189,9 @@ def log_history(url, title, fmt, folder):
 
 def do_download(url, fmt, out_dir, quality="best", subs=False, playlist=False):
     c1, c2 = theme_style()
-    os.makedirs(out_dir, exist_ok=True)
+    created = ensure_folder(out_dir)
+    status = "created" if created else "ready"
+    console.print(f"[dim]folder: {out_dir} ({status})[/dim]")
     try:
         with console.status("[bold]fetching info...[/bold]", spinner="dots"):
             info = fetch_info(url)
@@ -309,6 +320,12 @@ def menu():
             show_history()
         elif c == "8":
             about()
+        elif c == "9":
+            ensure_folder(CONFIG["folder"])
+            if os.name == "nt":
+                os.startfile(CONFIG["folder"])
+            else:
+                console.print(f"[dim]your downloads are in: {CONFIG['folder']}[/dim]")
         console.print()
 
 if __name__ == "__main__":

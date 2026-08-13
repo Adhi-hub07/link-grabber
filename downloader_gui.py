@@ -48,7 +48,8 @@ class DownloaderApp:
         root.configure(bg="#14101a")
         root.resizable(False, False)
 
-        self.folder = os.path.join(os.path.expanduser("~"), "Downloads")
+        self.folder = os.path.join(os.path.expanduser("~"), "Downloads", "ADHI-HUB Downloads")
+        os.makedirs(self.folder, exist_ok=True)
         self.format_var = tk.StringVar(value="video")
         self.quality_var = tk.StringVar(value="best")
         self.subs_var = tk.BooleanVar(value=False)
