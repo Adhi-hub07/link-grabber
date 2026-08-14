@@ -66,14 +66,15 @@ Or grab the pre-built **`ADHI-HUB-linux`** binary from the [latest release](http
 
 Message **[@adhi_hub_downloader_bot](https://t.me/adhi_hub_downloader_bot)** on Telegram → send any link → pick **🎬 MP4** or **🎵 MP3** → it downloads and sends the file right in the chat!
 
-> ⚠️ The bot runs on **your PC** (not the cloud). Keep it running to receive files:
+> ⚠️ The bot runs on **your PC** (not the cloud) — or deploy it for **free, 24/7** on Render (guide below).
+> Bot source + deploy guide: **[Adhi-hub07/adhi-hub-telegram-bot](https://github.com/Adhi-hub07/adhi-hub-telegram-bot)**
 
+**To run locally:**
 ```bash
 cd telegram-bot
 pip install python-telegram-bot yt-dlp
 python bot.py
 ```
-
 Or double-click **`telegram-bot/start_bot.bat`** on Windows. Your secret token lives in `telegram-bot/bot_token.txt` (never shared).
 
 ---

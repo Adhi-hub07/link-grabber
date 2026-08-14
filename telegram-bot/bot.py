@@ -12,7 +12,7 @@ import yt_dlp
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import Application, CallbackQueryHandler, CommandHandler, ContextTypes, MessageHandler, filters
 
-TOKEN = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "bot_token.txt")).read().strip()
+TOKEN = os.environ.get("BOT_TOKEN") or open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "bot_token.txt")).read().strip()
 
 MAX_SIZE = 50 * 1024 * 1024  # Telegram bot upload limit
 TEMP_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "downloads")
