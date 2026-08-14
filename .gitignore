@@ -5,3 +5,5 @@ dist/
 *.spec
 config.json
 history.json
+telegram-bot/bot_token.txt
+telegram-bot/downloads/
