@@ -135,7 +135,6 @@ pyinstaller --onefile --name ADHI-HUB downloader.py
 
 ```
 link-grabber/
-├── .github/workflows/  ← auto-builds EXE + Linux binary on release
 ├── assets/             ← banner image for README
 ├── releases/           ← ⭐ ready-made app (ADHI-HUB.exe)
 ├── downloader.py       ← main app (source — works on all systems)
