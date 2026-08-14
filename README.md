@@ -9,7 +9,6 @@
 ### ⬇ Direct Download (no Python needed)
 
 [![Download TUI](https://img.shields.io/badge/⬇_Download_ADHI--HUB.exe-pink?style=for-the-badge)](https://github.com/Adhi-hub07/link-grabber/releases/download/v1.0.0/ADHI-HUB.exe)
-[![Download GUI](https://img.shields.io/badge/⬇_Download_ADHI--HUB--GUI.exe-ff9ec7?style=for-the-badge)](https://github.com/Adhi-hub07/link-grabber/releases/download/v1.0.0/ADHI-HUB-GUI.exe)
 
 ### ⚡ One-line command (Windows PowerShell)
 
@@ -43,12 +42,9 @@ pip install yt-dlp rich
 
 | File | What it does | No Python needed? |
 |------|--------------|-------------------|
-| **`releases/ADHI-HUB.exe`** | ⭐ **Ready-made app (TUI)** — double-click, no installs | ✅ YES |
-| **`releases/ADHI-HUB-GUI.exe`** | ⭐ **Ready-made app (GUI window)** — double-click | ✅ YES |
+| **`releases/ADHI-HUB.exe`** | ⭐ **Ready-made app (terminal)** — double-click, no installs | ✅ YES |
 | `downloader.py` | Source code — terminal version (needs Python) | ❌ |
-| `downloader_gui.py` | Source code — GUI version (needs Python) | ❌ |
 | `start.bat` | One-click launcher for the Python version (Windows) | ❌ |
-| `start_gui.bat` | One-click launcher for the GUI Python version (Windows) | ❌ |
 
 > 💡 **Universal:** The `.exe` files run on ANY Windows PC (7/10/11) — no Python, no yt-dlp, no FFmpeg installs. Double-click and done.
 
@@ -66,15 +62,14 @@ pip install yt-dlp rich
 | 🕘 **History** | Your last 50 downloads, stored locally |
 | 🎨 **Themes** | 5 color themes: Pink, Blue, Green, Sunset, Gold |
 | 📊 **Live progress** | Animated progress bar with speed + ETA |
-| 🖥️ **GUI version** | Bonus clickable window app (no terminal needed) |
 
 ---
 
 ## 🚀 Quick Start
 
 ### Easiest — the EXE (anyone can do this)
-1. Download **`releases/ADHI-HUB.exe`** (terminal style) or **`releases/ADHI-HUB-GUI.exe`** (window style)
-2. Double-click it. That's it. 🎉
+1. Download **`releases/ADHI-HUB.exe`**
+2. Double-click it — the terminal app opens. That's it. 🎉
 
 ### From source (developers)
 1. Install [Python 3](https://python.org/downloads/) (tick "Add to PATH")
@@ -84,10 +79,9 @@ pip install yt-dlp rich
    ```
 3. Run:
    ```bash
-   python downloader.py        # terminal version
-   python downloader_gui.py    # GUI version
+   python downloader.py
    ```
-4. Or double-click **`start.bat`** / **`start_gui.bat`**
+4. Or double-click **`start.bat`**
 
 ---
 
@@ -135,8 +129,7 @@ python downloader.py "PLAYLIST_LINK" --playlist          # whole playlist
 
 ```bash
 pip install pyinstaller
-pyinstaller --onefile --name ADHI-HUB downloader.py        # terminal version
-pyinstaller --onefile --windowed --name ADHI-HUB-GUI downloader_gui.py  # GUI version
+pyinstaller --onefile --name ADHI-HUB downloader.py
 ```
 
 ---
@@ -146,13 +139,10 @@ pyinstaller --onefile --windowed --name ADHI-HUB-GUI downloader_gui.py  # GUI ve
 ```
 link-grabber/
 ├── assets/               ← banner image for README
-├── releases/              ← ⭐ ready-made apps, no installs needed
-│   ├── ADHI-HUB.exe       ← terminal version (Windows)
-│   └── ADHI-HUB-GUI.exe   ← window version (Windows)
+├── releases/              ← ⭐ ready-made app, no installs needed
+│   └── ADHI-HUB.exe       ← terminal version (Windows)
 ├── downloader.py          ← main TUI app (source)
-├── downloader_gui.py      ← GUI app (source)
 ├── start.bat              ← one-click launcher (TUI, Windows)
-├── start_gui.bat          ← one-click launcher (GUI, Windows)
 ├── README.md
 └── .gitignore
 ```
