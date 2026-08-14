@@ -49,6 +49,15 @@ chmod +x run.sh
 ./run.sh
 ```
 
+**Want it as a clickable app in the menu?** (Ubuntu / Mint / Debian / etc.)
+
+```bash
+chmod +x install-linux.sh
+./install-linux.sh
+```
+
+Then find **ADHI-HUB** in your applications menu — click it → the terminal opens with the app. 🎉
+
 Or grab the pre-built **`ADHI-HUB-linux`** binary from the [latest release](https://github.com/Adhi-hub07/link-grabber/releases).
 
 ---
@@ -140,6 +149,7 @@ link-grabber/
 ├── downloader.py       ← main app (source — works on all systems)
 ├── start.bat           ← Windows launcher
 ├── run.sh              ← Linux / macOS launcher
+├── install-linux.sh    ← Linux app-menu installer (clickable app!)
 ├── README.md
 └── .gitignore
 ```
