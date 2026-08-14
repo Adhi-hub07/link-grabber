@@ -9,6 +9,7 @@
 ### ⬇ Direct Download (no Python needed)
 
 [![Download TUI](https://img.shields.io/badge/⬇_Download_ADHI--HUB.exe-pink?style=for-the-badge)](https://github.com/Adhi-hub07/link-grabber/releases/download/v1.0.0/ADHI-HUB.exe)
+[![Download BAT](https://img.shields.io/badge/⬇_Download_start.bat-8fd3ff?style=for-the-badge)](https://raw.githubusercontent.com/Adhi-hub07/link-grabber/main/start.bat)
 
 ### ⚡ One-line command (Windows PowerShell)
 
