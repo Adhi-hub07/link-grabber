@@ -40,6 +40,17 @@ pip install yt-dlp rich
 python downloader.py
 ```
 
+### Option C — Linux / macOS 🐧
+
+[![Download run.sh](https://img.shields.io/badge/⬇_Download_run.sh-7dfa9a?style=for-the-badge)](https://raw.githubusercontent.com/Adhi-hub07/link-grabber/main/run.sh)
+
+```bash
+chmod +x run.sh
+./run.sh
+```
+
+Or grab the pre-built **`ADHI-HUB-linux`** binary from the [latest release](https://github.com/Adhi-hub07/link-grabber/releases).
+
 ---
 
 ## 📦 Which file is which?
@@ -47,8 +58,10 @@ python downloader.py
 | File | What it does | Needs Python? |
 |------|--------------|---------------|
 | `releases/ADHI-HUB.exe` | ⭐ Ready-made app — works on any Windows PC, double-click and done | ❌ No |
-| `downloader.py` | Source code — the app itself | ✅ Yes |
-| `start.bat` | One-click launcher for the Python version | ✅ Yes |
+| `ADHI-HUB-linux` | ⭐ Ready-made app — for Linux (from releases) | ❌ No |
+| `downloader.py` | Source code — the app itself (Windows / Linux / macOS) | ✅ Yes |
+| `start.bat` | One-click launcher — Windows | ✅ Yes |
+| `run.sh` | One-click launcher — Linux / macOS | ✅ Yes |
 
 ---
 
@@ -122,10 +135,12 @@ pyinstaller --onefile --name ADHI-HUB downloader.py
 
 ```
 link-grabber/
-├── assets/          ← banner image for README
-├── releases/        ← ⭐ ready-made app (ADHI-HUB.exe)
-├── downloader.py    ← main app (source)
-├── start.bat        ← one-click launcher
+├── .github/workflows/  ← auto-builds EXE + Linux binary on release
+├── assets/             ← banner image for README
+├── releases/           ← ⭐ ready-made app (ADHI-HUB.exe)
+├── downloader.py       ← main app (source — works on all systems)
+├── start.bat           ← Windows launcher
+├── run.sh              ← Linux / macOS launcher
 ├── README.md
 └── .gitignore
 ```
